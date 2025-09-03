@@ -3,3 +3,50 @@ obj/
 /packages/
 riderModule.iml
 /_ReSharper.Caches/
+# Build results
+bin/
+obj/
+out/
+Debug/
+Release/
+
+# Rider / JetBrains
+.idea/
+
+# Visual Studio Code
+.vscode/
+
+# User-specific files
+*.user
+*.suo
+*.userosscache
+*.sln.docstates
+
+# Build logs
+*.log
+
+# OS-specific
+.DS_Store
+Thumbs.db
+
+# NuGet packages
+*.nupkg
+*.snupkg
+*.nuspec
+packages/
+
+# Others
+*.exe
+*.dll
+*.pdb
+*.cache
+*.tmp
+*.bak
+
+# Coverage / Test
+TestResult*/
+*.coverage
+*.coveragexml
+
+# dotnet tools
+.dotnet/
