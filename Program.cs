@@ -1,4 +1,10 @@
-﻿/*
+﻿
+
+class Program
+{
+    static void Main()
+  {
+        /*
  * 1. Print Hello and Name
    
    Write a C# Sharp program to print Hello and your name in a separate line.
@@ -386,3 +392,5 @@ void Exercise13()
 }
 
 // Exercise13(); 
+    }
+}
