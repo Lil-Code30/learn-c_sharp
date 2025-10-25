@@ -55,13 +55,51 @@ public class WorkItem
 public class ChangeRequest : WorkItem
 {
     protected int originalItemID { get; set; }
+
+    // Constructors. Because neither constructor calls a base-class
+    // constructor explicitly, the default constructor in the base class
+    // is called implicitly. The base class must contain a default
+    // constructor.
+
+    // Default Contructor for the derived class
+    public ChangeRequest() { }
     
-    
+    // Instance constructor that has four parameters
+    public ChangeRequest(string title, string desc, TimeSpan jobLen, int originalID)
+    {
+        // The following properties and the GetNexID method are inherited
+        // from WorkItem.
+
+        this.ID = GetNextID();
+        this.Title = title;
+        this.Description = desc;
+        this.jobLength = jobLen;
+
+        // Property originalItemID is a member of ChangeRequest, but not
+        // of WorkItem.
+        this.originalItemID = originalID;
+    }  
 }
 class Programm
 {
     static void Main()
     {
-        Console.WriteLine("Hello World!");
+        // Create an instance of WorkItem by using the constructor in the
+        // base class that takes three arguments.
+        WorkItem item = new("Fix Bugs", "Fix all bugs in my code branch", new TimeSpan(3, 4, 0, 0));
+
+        // Create an instance of ChangeRequest by using the constructor in
+        // the derived class that takes four arguments.
+        ChangeRequest change = new("Change Base Class Design", "Add members to the class", new TimeSpan(4, 0, 0), 1);
+
+        // Use the ToString method defined in WorkItem.
+        Console.WriteLine(item.ToString());
+
+        // Use the inherited Update method to change the title of the
+        // ChangeRequest object.
+        change.Update("Change the Design of the Base Class", new TimeSpan(4, 0, 0));
+
+        // ChangeRequest inherits WorkItem's override of ToString.
+        Console.WriteLine(change.ToString());
     }
-}
+}   

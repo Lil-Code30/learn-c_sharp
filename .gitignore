@@ -16,6 +16,7 @@ Release/
 # Visual Studio Code
 .vscode/
 .vs
+.Properties
 
 # User-specific files
 *.user
