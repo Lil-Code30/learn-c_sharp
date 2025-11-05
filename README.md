@@ -64,7 +64,7 @@ learn-c_sharp/
 
 1. **Clone the repository**
    ```bash
-   git clone https://github.com/Lil-Code30/learn-c_sharp.git
+   git clone <repository-url>
    cd learn-c_sharp
    ```
 
