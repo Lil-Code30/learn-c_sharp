@@ -1,11 +1,11 @@
-using oop.classes;
+namespace oop.classes;
 
 class Employe
 {
-    private string nom;
+    public string nom;
     private string fonction;
     private int bureau;
-    private string email;
+    public string email;
 
     public Employe(string nom, string fonction, int bureau, string email)
     {
@@ -38,7 +38,12 @@ class Employe
 
     public void Afficher()
     {
-        Console.WriteLine($"\n Le nom de l'employee est {nom} \n son E-mail est : {email}");
+        Console.WriteLine("┌──────────────────────────────────────────┐");
+        Console.WriteLine($"│ Employé: {nom,-29} │");
+        Console.WriteLine($"│ Fonction: {fonction,-28} │");
+        Console.WriteLine($"│ Bureau: {(bureau == 0 ? "N/A" : bureau.ToString()),-30} │");
+        Console.WriteLine($"│ E-mail: {email,-30} │");
+        Console.WriteLine("└──────────────────────────────────────────┘");
     }
     
     public bool Louer(Livre livre){
@@ -69,6 +74,7 @@ class Livre
 
     public Employe Locataire
     {
+        get { return locataire; }
         set
         {
             locataire = value;
@@ -83,5 +89,14 @@ class Livre
         }
 
         return true;
+    }
+
+    public void Afficher()
+    {
+        Console.WriteLine("├──────────────────────────────────────────────────────┤");
+        Console.WriteLine($"│ Titre: {titre,-49} │");
+        Console.WriteLine($"│ Auteur: {auteur,-48} │");
+        Console.WriteLine($"│ Loué: {(EstLoue() ? $"Oui, par {locataire.nom}" : "Non"),-50} │");
+        Console.WriteLine("├──────────────────────────────────────────────────────┤");
     }
 }
