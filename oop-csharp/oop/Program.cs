@@ -127,7 +127,7 @@ class Program
 
             Console.WriteLine();
 
-            List<Montre> montres = new List<Montre>();
+            Montre[] montres = new Montre[5];
 
             Random rand = new Random();
 
@@ -137,25 +137,10 @@ class Program
                 int heure = rand.Next(0, 24);
                 int minute = rand.Next(0, 60);
                 int seconde = rand.Next(0, 60);
-                montres.Add(new Montre(heure, minute, seconde));
+                montres[i] = new Montre(heure, minute, seconde);
             }
 
-            Console.WriteLine("\n⌚⌚⌚ === Collection de Montres === ⌚⌚⌚");
-            Console.WriteLine("╔════════════╦══════════════════════╗");
-            Console.WriteLine("║   Montre # ║      Heure Actuelle  ║");
-            Console.WriteLine("╠════════════╬══════════════════════╣");
-
-            int index = 1;
-
-            foreach (var montre in montres)
-            {
-                Console.Write($"║    {index,2}      ║ ");
-                montre.AfficherMontre();
-                index++;
-            }
-            Console.WriteLine("╚════════════╩══════════════════════╝");
-            Console.WriteLine();
-
+            afficheListeMontre("montres", montres);
 
             Montre[] magasinA =
             {
@@ -168,25 +153,32 @@ class Program
                 new Montre(6, 0, 0),
                 new Montre(15, 45, 20)
             };
+
+            afficheListeMontre("magasinA", magasinA);
             
-            Console.WriteLine("\n=== Collection de Montres chez 'magasinA' ===");
-            Console.WriteLine("╔════════════╦══════════════════════╗");
-            Console.WriteLine("║   Montre # ║      Heure Actuelle  ║");
-            Console.WriteLine("╠════════════╬══════════════════════╣");
-
-            int index1 = 1;
-
-            foreach (var montre in magasinA)
-            {
-                Console.Write($"║    {index1,2}      ║ ");
-                montre.AfficherMontre();
-                index1++;
-            }
-            Console.WriteLine("╚════════════╩══════════════════════╝");
-            Console.WriteLine();
-            Montre.AfficherNombreDeMontreDansUnMagasin("magasinA", magasinA);
             Console.WriteLine();
             Montre.AfficherNombreDeMontre();
+            
+            void afficheListeMontre(string nom, Montre[] montres)
+            {
+             Console.WriteLine($"\n=== Collection de Montres chez '{nom}' ===");
+                Console.WriteLine("╔════════════╦══════════════════════╗");
+                Console.WriteLine("║   Montre # ║      Heure Actuelle  ║");
+                Console.WriteLine("╠════════════╬══════════════════════╣");
+
+                int index = 1;
+
+                foreach (var montre in montres)
+                {
+                    Console.Write($"║    {index,2}      ║ ");
+                    montre.AfficherMontre();
+                    index++;
+                }
+                Console.WriteLine("╚════════════╩══════════════════════╝");
+                Console.WriteLine();
+                Montre.AfficherNombreDeMontreDansUnMagasin(nom, montres);
+                Console.WriteLine();
+            }
             
         }
     }
