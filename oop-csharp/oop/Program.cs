@@ -14,11 +14,13 @@ class Program
             Console.WriteLine("╚══════════════════════════════════════════════════════╝");
             Console.WriteLine("1. Démonstration de la classe Rectangle");
             Console.WriteLine("2. Démonstration du système de bibliothèque (Employe/Livre)");
+            Console.WriteLine("3. Démonstration de la classe Montre");
             Console.WriteLine("0. Quitter");
-            Console.Write("Votre choix : ");
+            Console.Write("\nVotre choix : ");
 
             string choix = Console.ReadLine();
-
+            
+            Console.WriteLine();
             switch (choix)
             {
                 case "1":
@@ -26,6 +28,9 @@ class Program
                     break;
                 case "2":
                     RunLibraryDemo();
+                    break;
+                case "3":
+                    RunMontreDemo();
                     break;
                 case "0":
                     exit = true;
@@ -58,7 +63,7 @@ class Program
 
         static void RunLibraryDemo()
         {
-          List<Employe> employes = new List<Employe>
+            List<Employe> employes = new List<Employe>
             {
                 new Employe("Dupont", "Développeur", 15, "j.dupont@email.com"),
                 new Employe("Martin", "Manager", 22, "p.martin@email.com"),
@@ -66,7 +71,6 @@ class Program
                 new Employe("Leroy", "Testeur", 45, "a.leroy@email.com"),
                 new Employe("Moreau", "RH", "c.moreau@email.com")
             };
-            
             List<Livre> livres = new List<Livre>();
             for (int i = 1; i <= 10; i++)
             {
@@ -82,8 +86,8 @@ class Program
 
             Console.WriteLine("\n--- Liste des Livres ---");
             livres.ForEach(l => l.Afficher());
-            
-            
+
+
             Console.WriteLine("\n--- Simulation de Location ---");
             employes[0].Louer(livres[0]);
             Console.WriteLine($"Tentative de location: {employes[0].nom} loue '{livres[0].titre}'.");
@@ -91,10 +95,63 @@ class Program
             employes[2].Louer(livres[4]);
             Console.WriteLine($"Tentative de location: {employes[2].nom} loue '{livres[4].titre}'.");
 
-            
+
             Console.WriteLine("\n--- État Final des Livres ---");
             livres.ForEach(l => l.Afficher());
-            
+
+        }
+        
+        static void RunMontreDemo()
+        {
+            Console.WriteLine("===== eMontre Shop =======");
+
+            Montre m = new Montre(19, 6, 14);
+
+            // Console.WriteLine($"\n{m.Heure} heure.");
+
+            m.Minute = 90;
+            Console.WriteLine($"minute : {m.Minute}"); // la minute serait tjr a 6 
+
+            m.Seconde = 58;
+            m.AfficherMontre();
+
+            m = new Montre(22, 39, 44);
+
+            Console.Write("Montre apres modification : ");
+            m.AfficherMontre();
+
+            Montre m2 = new Montre(m);
+            m2.AfficherMontre();
+
+            Console.WriteLine();
+
+            List<Montre> montres = new List<Montre>();
+
+            Random rand = new Random();
+
+            // Création d'une liste de 5 montres avec des données aléatoires valides
+            for (int i = 0; i < 5; i++)
+            {
+                int heure = rand.Next(0, 24);
+                int minute = rand.Next(0, 60);
+                int seconde = rand.Next(0, 60);
+                montres.Add(new Montre(heure, minute, seconde));
+            }
+
+            Console.WriteLine("\n⌚⌚⌚ === Collection de Montres === ⌚⌚⌚");
+            Console.WriteLine("╔════════════╦══════════════════════╗");
+            Console.WriteLine("║   Montre # ║      Heure Actuelle  ║");
+            Console.WriteLine("╠════════════╬══════════════════════╣");
+
+            int index = 1;
+
+            foreach (var montre in montres)
+            {
+                Console.Write($"║    {index,2}      ║ ");
+                montre.AfficherMontre();
+                index++;
+            }
+            Console.WriteLine("╚════════════╩══════════════════════╝");
         }
     }
 }
