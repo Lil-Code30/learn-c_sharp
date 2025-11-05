@@ -1,4 +1,4 @@
-namespace oop.formes;
+namespace oop.classes;
 
 class Rectangle
 {

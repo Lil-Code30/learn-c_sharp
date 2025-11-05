@@ -1,4 +1,4 @@
-﻿using oop.formes;
+﻿using oop.classes;
 
 class Program
 {
