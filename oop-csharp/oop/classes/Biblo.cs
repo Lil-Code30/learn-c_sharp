@@ -60,10 +60,10 @@ class Employe
 
 class Livre
 {
-    private string titre;
-    private string auteur;
-    private string edition;
-    private Employe locataire;
+    public string titre;
+    public string auteur;
+    public string edition;
+    public Employe locataire;
 
     public Livre(string titre, string auteur, string edition)
     {
