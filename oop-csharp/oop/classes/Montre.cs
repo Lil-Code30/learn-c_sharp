@@ -6,6 +6,7 @@ class Montre
     private int minute;
     private int seconde;
 
+    private static int nombresMontre = 0;
     private bool IsMinSecValid(int minSec)
     {
         if (minSec >= 0 && minSec < 60)
@@ -30,6 +31,7 @@ class Montre
     public Montre(int h, int m, int s)
     {
         SetTime(h, m, s);
+        nombresMontre++;
     }
 
     public Montre()
@@ -37,11 +39,13 @@ class Montre
         heure = 0;
         minute = 0;
         seconde = 0;
+        nombresMontre++;
     }
 
     public Montre(Montre m)
     {
         SetTime(m);
+        nombresMontre++;
     }
 
     public void SetTime(int h, int m, int s)
@@ -62,6 +66,13 @@ class Montre
     public void AfficherMontre()
     {
         Console.WriteLine($"{heure}h{minute}m{seconde}s");
+    }
+
+    public static void AfficherNombreDeMontre()
+    {
+        Console.WriteLine("╔════════════╦══════════════════════╗");
+        Console.WriteLine($"║   Total #  ║ {nombresMontre,2} montres au total  ║");
+        Console.WriteLine("╚════════════╩══════════════════════╝");
     }
 
     //Accesseurs

@@ -105,9 +105,10 @@ class Program
         {
             Console.WriteLine("===== eMontre Shop =======");
 
+            /*
             Montre m = new Montre(19, 6, 14);
 
-            // Console.WriteLine($"\n{m.Heure} heure.");
+            Console.WriteLine($"\n{m.Heure} heure.");
 
             m.Minute = 90;
             Console.WriteLine($"minute : {m.Minute}"); // la minute serait tjr a 6 
@@ -122,7 +123,8 @@ class Program
 
             Montre m2 = new Montre(m);
             m2.AfficherMontre();
-
+            */
+            
             Console.WriteLine();
 
             List<Montre> montres = new List<Montre>();
@@ -152,6 +154,9 @@ class Program
                 index++;
             }
             Console.WriteLine("╚════════════╩══════════════════════╝");
+            Console.WriteLine();
+
+            Montre.AfficherNombreDeMontre();
         }
     }
 }
