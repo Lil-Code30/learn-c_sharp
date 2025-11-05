@@ -75,6 +75,12 @@ class Montre
         Console.WriteLine("╚════════════╩══════════════════════╝");
     }
 
+    public static void AfficherNombreDeMontreDansUnMagasin(string nom, Montre[] montres)
+    {
+        int total = montres.Length;
+        Console.WriteLine($"{nom} possede {total} montres dans son stock");
+    }
+
     //Accesseurs
     public int Heure
     {
