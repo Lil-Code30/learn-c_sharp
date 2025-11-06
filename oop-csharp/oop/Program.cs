@@ -195,6 +195,10 @@ class Program
             var person = Person.Parse("Loko");
 
             person.Introduce("Isko");
+
+            person.Birthdate = new DateTime(2000, 1, 1);
+
+            Console.WriteLine($"I am {person.Age} years old.");
         } 
     }
 }
