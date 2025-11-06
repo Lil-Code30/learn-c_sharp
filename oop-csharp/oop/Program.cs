@@ -15,6 +15,7 @@ class Program
             Console.WriteLine("1. Démonstration de la classe Rectangle");
             Console.WriteLine("2. Démonstration du système de bibliothèque (Employe/Livre)");
             Console.WriteLine("3. Démonstration de la classe Montre");
+            Console.WriteLine("4. Démonstration de la classe Person");
             Console.WriteLine("0. Quitter");
             Console.Write("\nVotre choix : ");
 
@@ -31,6 +32,9 @@ class Program
                     break;
                 case "3":
                     RunMontreDemo();
+                    break;
+                case "4":
+                    RunPersonDemo();
                     break;
                 case "0":
                     exit = true;
@@ -155,13 +159,13 @@ class Program
             };
 
             afficheListeMontre("magasinA", magasinA);
-            
+
             Console.WriteLine();
             Montre.AfficherNombreDeMontre();
-            
+
             void afficheListeMontre(string nom, Montre[] montres)
             {
-             Console.WriteLine($"\n=== Collection de Montres chez '{nom}' ===");
+                Console.WriteLine($"\n=== Collection de Montres chez '{nom}' ===");
                 Console.WriteLine("╔════════════╦══════════════════════╗");
                 Console.WriteLine("║   Montre # ║      Heure Actuelle  ║");
                 Console.WriteLine("╠════════════╬══════════════════════╣");
@@ -179,7 +183,18 @@ class Program
                 Montre.AfficherNombreDeMontreDansUnMagasin(nom, montres);
                 Console.WriteLine();
             }
-            
+
         }
+        
+        static void RunPersonDemo()
+        {
+            // var person = new Person();
+            // person.Name = "Loko";
+            // person.Introduce("Isko");
+
+            var person = Person.Parse("Loko");
+
+            person.Introduce("Isko");
+        } 
     }
 }
