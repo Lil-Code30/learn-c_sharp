@@ -208,6 +208,11 @@ class Program
         static void RunPresentationDemo()
         {
             var text = new Text();
+
+            text.width = 100;
+            text.Height = 50;
+
+            text.Copy();
         }
     }
 }
