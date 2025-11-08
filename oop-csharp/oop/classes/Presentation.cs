@@ -26,3 +26,40 @@ class Text : Presentation
         Console.WriteLine($"We added a link to ({url}).");
     }
 }
+
+class Logger
+{
+    public void Log(string message)
+    {
+        Console.WriteLine(message);
+    }
+}
+
+class DbMigrator
+{
+    private readonly Logger _logger;
+
+    public DbMigrator(Logger logger)
+    {
+        _logger = logger;
+    }
+
+    public void Migrate()
+    {
+        _logger.Log("We are migrating the DB from PgAdmin to NeonDB.");
+    }
+}
+
+class Installer
+{
+    private readonly Logger _logger;
+    public Installer(Logger logger)
+    {
+        _logger = logger;
+    }
+
+    public void Install()
+    {
+        _logger.Log("We are installing the application.");
+    }
+}

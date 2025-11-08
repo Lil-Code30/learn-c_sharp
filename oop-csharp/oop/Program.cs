@@ -213,6 +213,17 @@ class Program
             text.Height = 50;
 
             text.Copy();
+
+            Console.WriteLine("Logger demonstration...");
+
+            var dbMigrator = new DbMigrator(new Logger());
+
+            var logger = new Logger();
+
+            var installer = new Installer(logger);
+
+            dbMigrator.Migrate();
+            installer.Install();
         }
     }
 }
