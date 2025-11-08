@@ -16,6 +16,7 @@ class Program
             Console.WriteLine("2. Démonstration du système de bibliothèque (Employe/Livre)");
             Console.WriteLine("3. Démonstration de la classe Montre");
             Console.WriteLine("4. Démonstration de la classe Person");
+            Console.WriteLine("5. Démonstration de la classe Presentation");
             Console.WriteLine("0. Quitter");
             Console.Write("\nVotre choix : ");
 
@@ -35,6 +36,9 @@ class Program
                     break;
                 case "4":
                     RunPersonDemo();
+                    break;
+                case "5":
+                    RunPresentationDemo();
                     break;
                 case "0":
                     exit = true;
@@ -200,5 +204,10 @@ class Program
 
             Console.WriteLine($"I am {person.Age} years old.");
         } 
+
+        static void RunPresentationDemo()
+        {
+            var text = new Text();
+        }
     }
 }

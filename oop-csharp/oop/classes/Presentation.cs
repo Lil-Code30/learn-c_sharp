@@ -1,6 +1,6 @@
 namespace oop.classes;
 
-class PresentationObject
+class Presentation
 {
     public int width { get; set; }
     public int Height { get; set; }
@@ -16,7 +16,7 @@ class PresentationObject
     }
 }
 
-class Text : PresentationObject
+class Text : Presentation
 {
     public int FontSize { get; set; }
     public int FontName { get; set; }
