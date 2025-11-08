@@ -17,6 +17,7 @@ class Program
             Console.WriteLine("3. Démonstration de la classe Montre");
             Console.WriteLine("4. Démonstration de la classe Person");
             Console.WriteLine("5. Démonstration de la classe Presentation");
+            Console.WriteLine("6. Démonstration Casting");
             Console.WriteLine("0. Quitter");
             Console.Write("\nVotre choix : ");
 
@@ -39,6 +40,9 @@ class Program
                     break;
                 case "5":
                     RunPresentationDemo();
+                    break;
+                case "6":
+                    RunCastingDemo();
                     break;
                 case "0":
                     exit = true;
@@ -224,6 +228,17 @@ class Program
 
             dbMigrator.Migrate();
             installer.Install();
+        }
+
+        static void RunCastingDemo()
+        {
+            Paragraph p1 = new Paragraph();
+            Shape shape = p1;  // upcasting going on here 
+
+            p1.Width = 200;
+            shape.Width = 100;
+
+            Console.WriteLine(p1.Width);
         }
     }
 }
