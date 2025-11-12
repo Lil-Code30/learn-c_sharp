@@ -4,6 +4,7 @@ class Etudiant
 {
     protected string nom;
     protected string adresse;
+    protected int paiement;
 
     public Etudiant(string nom, string adresse)
     {
@@ -45,6 +46,11 @@ class Etudiant
     {
         get { return adresse; }
         set { adresse = value; }
+    }
+
+    public int Paiement
+    {
+        get { return paiement; }
     } 
 }
 
@@ -63,6 +69,7 @@ class EtudiantEtranger : Etudiant
         int prixAssurance = 2500;
 
         int fraisTotal = (nbreCours * prixCourUnite) + prixAssurance;
+        this.paiement = fraisTotal;
 
         Console.WriteLine("=== Paiement session (Étudiant étranger) ===");
         Console.WriteLine($"Nombre de cours  : {nbreCours}");
