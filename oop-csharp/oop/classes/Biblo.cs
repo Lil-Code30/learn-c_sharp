@@ -36,12 +36,11 @@ class Employe
         }
     }
 
-    public void Afficher()
+    public virtual void Afficher()
     {
         Console.WriteLine("┌──────────────────────────────────────────┐");
         Console.WriteLine($"│ Employé: {nom,-29} │");
         Console.WriteLine($"│ Fonction: {fonction,-28} │");
-        Console.WriteLine($"│ Bureau: {(bureau == 0 ? "N/A" : bureau.ToString()),-30} │");
         Console.WriteLine($"│ E-mail: {email,-30} │");
         Console.WriteLine("└──────────────────────────────────────────┘");
     }
@@ -63,10 +62,20 @@ class Bibliothecaire : Employe
     {
 
     }
-    
+
     public void Retour(Livre livre)
     {
         livre.Locataire = null;
+    }
+    
+     public override void Afficher()
+    {
+        Console.WriteLine("┌──────────────────────────────────────────┐");
+        Console.WriteLine($"│ Employé: {nom,-29} │");
+        Console.WriteLine($"│ Fonction: {fonction,-28} │");
+        Console.WriteLine($"│ Bureau: {(bureau == 0 ? "N/A" : bureau.ToString()),-30} │");
+        Console.WriteLine($"│ E-mail: {email,-30} │");
+        Console.WriteLine("└──────────────────────────────────────────┘");
     }
 }
 
