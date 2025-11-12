@@ -107,6 +107,36 @@ class Program
             employes[2].Louer(livres[4]);
             Console.WriteLine($"Tentative de location: {employes[2].nom} loue '{livres[4].titre}'.");
 
+            Employe Audrey = new Employe("Audrey", "professeur", 10, "audrey@gmail.ca");
+
+            Bibliothecaire David = new Bibliothecaire("David", "charge de cours", "david@uqar.ca");
+
+
+            if (Audrey.Louer(livres[5]))
+            {
+                Console.WriteLine($"Tentative de location: {Audrey.nom} loue '{livres[5].titre}'.");
+            }
+            else
+            {
+                Console.WriteLine("Location non effectuee");
+            }
+
+            livres[5].Afficher();
+
+            David.Retour(livres[5]);
+
+            if (David.Louer(livres[5]))
+            {
+                Console.WriteLine($"Tentative de location: {David.nom} loue '{livres[5].titre}'.");
+            }
+            else
+            {
+                Console.WriteLine("Location non effectuee");
+            }
+
+            David.Bureau = 7;
+
+            livres[5].Afficher();
 
             Console.WriteLine("\n--- État Final des Livres ---");
             livres.ForEach(l => l.Afficher());

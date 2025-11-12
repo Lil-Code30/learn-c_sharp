@@ -3,8 +3,8 @@ namespace oop.classes;
 class Employe
 {
     public string nom;
-    private string fonction;
-    private int bureau;
+    protected string fonction;
+    protected int bureau;
     public string email;
 
     public Employe(string nom, string fonction, int bureau, string email)
@@ -57,6 +57,18 @@ class Employe
     }
 }
 
+class Bibliothecaire : Employe
+{
+    public Bibliothecaire(string nom, string fonction, string email) : base(nom, fonction, email)
+    {
+
+    }
+    
+    public void Retour(Livre livre)
+    {
+        livre.Locataire = null;
+    }
+}
 
 class Livre
 {
