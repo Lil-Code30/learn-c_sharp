@@ -18,6 +18,7 @@ class Program
             Console.WriteLine("4. Démonstration de la classe Person");
             Console.WriteLine("5. Démonstration de la classe Presentation");
             Console.WriteLine("6. Démonstration Casting");
+            Console.WriteLine("7. Démonstration de la classe Etudiant/Etudiant Etranger");
             Console.WriteLine("0. Quitter");
             Console.Write("\nVotre choix : ");
 
@@ -43,6 +44,9 @@ class Program
                     break;
                 case "6":
                     RunCastingDemo();
+                    break;
+                case "7":
+                    RunEtudiantDemo();
                     break;
                 case "0":
                     exit = true;
@@ -269,6 +273,32 @@ class Program
             shape.Width = 100;
 
             Console.WriteLine(p1.Width);
+        }
+
+        static void RunEtudiantDemo()
+        {
+            List<Etudiant> etudiants = new List<Etudiant>
+            {
+                new Etudiant("Alice", "123 Rue A"),
+                new Etudiant("Bob", "456 Rue B"),
+                new EtudiantEtranger("Chen", "789 Rue C", "Chine"),
+                new EtudiantEtranger("Fatima", "101 Rue D", "Maroc")
+            };
+
+            const int coursInscrits = 5;
+
+            Console.WriteLine("\n=== Étudiants inscrits à 5 cours ===\n");
+            Console.WriteLine("╔═════════════════╦══════════════════════╦══════════════╦════════════════╗");
+            Console.WriteLine("║ Nom             ║ Adresse              ║ Pays         ║ Montant (CAD)  ║");
+            Console.WriteLine("╠═════════════════╬══════════════════════╬══════════════╬════════════════╣");
+
+            foreach (Etudiant e in etudiants)
+            {
+                string pays = e is EtudiantEtranger ee ? ee.PaysOrigine : "-";
+                Console.WriteLine($"║ {e.Nom,-15} ║ {e.Adresse,-20} ║ {pays,-12} ║ {e.PaiementSession(coursInscrits),14:N0} ║");
+            }
+             Console.WriteLine("╚═════════════════╩══════════════════════╩══════════════╩════════════════╝");
+            Console.WriteLine();
         }
     }
 }

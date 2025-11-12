@@ -4,7 +4,6 @@ class Etudiant
 {
     protected string nom;
     protected string adresse;
-    protected int paiement;
 
     public Etudiant(string nom, string adresse)
     {
@@ -20,19 +19,20 @@ class Etudiant
         Console.WriteLine();
     }
     
-    public virtual void PaiementSession(int nbreCours)
+    public virtual int PaiementSession(int nbreCours)
     {
         int prixCourUnite = 300;
         int prixAssurance = 500;
 
         int fraisTotal = (nbreCours * prixCourUnite) + prixAssurance;
+        return fraisTotal;
 
-        Console.WriteLine("=== Paiement session (Étudiant) ===");
-        Console.WriteLine($"Nombre de cours  : {nbreCours}");
-        Console.WriteLine($"Prix par cours   : {prixCourUnite} ");
-        Console.WriteLine($"Prix assurance   : {prixAssurance} ");
-        Console.WriteLine($"Frais total      : {fraisTotal} ");
-        Console.WriteLine();
+        // Console.WriteLine("=== Paiement session (Étudiant) ===");
+        // Console.WriteLine($"Nombre de cours  : {nbreCours}");
+        // Console.WriteLine($"Prix par cours   : {prixCourUnite} ");
+        // Console.WriteLine($"Prix assurance   : {prixAssurance} ");
+        // Console.WriteLine($"Frais total      : {fraisTotal} ");
+        // Console.WriteLine();
 
     }
 
@@ -47,11 +47,6 @@ class Etudiant
         get { return adresse; }
         set { adresse = value; }
     }
-
-    public int Paiement
-    {
-        get { return paiement; }
-    } 
 }
 
 class EtudiantEtranger : Etudiant
@@ -63,20 +58,20 @@ class EtudiantEtranger : Etudiant
         this.paysOrigine = paysOrigine;
     }
 
-    public override void PaiementSession(int nbreCours)
+    public override int PaiementSession(int nbreCours)
     {
         int prixCourUnite = 1000;
         int prixAssurance = 2500;
 
         int fraisTotal = (nbreCours * prixCourUnite) + prixAssurance;
-        this.paiement = fraisTotal;
+        return fraisTotal;
 
-        Console.WriteLine("=== Paiement session (Étudiant étranger) ===");
-        Console.WriteLine($"Nombre de cours  : {nbreCours}");
-        Console.WriteLine($"Prix par cours   : {prixCourUnite} ");
-        Console.WriteLine($"Prix assurance   : {prixAssurance} ");
-        Console.WriteLine($"Frais total      : {fraisTotal} ");
-        Console.WriteLine();
+        // Console.WriteLine("=== Paiement session (Étudiant étranger) ===");
+        // Console.WriteLine($"Nombre de cours  : {nbreCours}");
+        // Console.WriteLine($"Prix par cours   : {prixCourUnite} ");
+        // Console.WriteLine($"Prix assurance   : {prixAssurance} ");
+        // Console.WriteLine($"Frais total      : {fraisTotal} ");
+        // Console.WriteLine();
     }
 
     public override void Afficher()
