@@ -47,7 +47,7 @@ class ClasseB : ClasseA
 
     public void Affichage(int x)
     {
-        Console.Write(a1 * x);
+        Console.WriteLine(a1 * x);
     }
 
     public int Calcul(ClasseC objC)
@@ -68,6 +68,7 @@ class ClasseC : ClasseA
 
     public override void Affichage()
     {
+        Console.WriteLine(a3);
     }
 
     public override int Calcul(int y)

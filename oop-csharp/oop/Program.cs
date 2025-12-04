@@ -19,6 +19,7 @@ class Program
             Console.WriteLine("5. Démonstration de la classe Presentation");
             Console.WriteLine("6. Démonstration Casting");
             Console.WriteLine("7. Démonstration de la classe Etudiant/Etudiant Etranger");
+            Console.WriteLine("8. Démonstration de la classe Pour Révision 01 Examen Finale");
             Console.WriteLine("0. Quitter");
             Console.Write("\nVotre choix : ");
 
@@ -47,6 +48,9 @@ class Program
                     break;
                 case "7":
                     RunEtudiantDemo();
+                    break;
+                case "8":
+                    RunRevision01Demo();
                     break;
                 case "0":
                     exit = true;
@@ -299,6 +303,31 @@ class Program
             }
              Console.WriteLine("╚═════════════════╩══════════════════════╩══════════════╩════════════════╝");
             Console.WriteLine();
+        }
+
+        static void RunRevision01Demo()
+        {
+            Console.WriteLine("Révision 01 Examen finale");
+
+            // ClasseA objA = new ClasseA(0);  // Cannot create an instance of the abstract type or interface 'ClasseA'  
+            ClasseB objB = new ClasseB(2, 3);       
+            ClasseC objC = new ClasseC(4, 5, 6); 
+
+            // Barrer ou Donner l’affichage, après correction si nécessaire
+
+            objB.Affichage();  // vide
+            objC.Affichage();  // 6
+            objB.Affichage(objC.a3);  // 12
+            // objC.Affichage(5);   // no params for this 
+            Console.WriteLine(objB.A2); // 0  // a2 est protected, pas accessible en dehors de la classe parent ou enfant
+            Console.WriteLine(objB.Calcul(10));  // 12 
+            Console.WriteLine(objC.Calcul(10));  // 6
+            Console.WriteLine(objB.Calcul(objC.a3));  // 8
+            Console.WriteLine(objC.Calcul(objC.a3));  // 2
+            Console.WriteLine(objB.Calcul(objC)); // 0
+            // Console.WriteLine(objC.Calcul(objC));  // must take and int as parameter
+            objB.Affichage();   // vide
+            objC.Affichage();  // 0
         }
     }
 }
