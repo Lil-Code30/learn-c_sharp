@@ -8,7 +8,7 @@ abstract class ClasseA
     public ClasseA(int a1, int a2)
     {
         this.a1 = a1;
-        this.a2 = a2;
+        A2 = a2;
     }
 
     public abstract void  Affichage();
@@ -16,6 +16,20 @@ abstract class ClasseA
     {
         z = z + 2;
         return z;
+    }
+
+    // Proposer une solution pour que a2 puisse être affiché et modifié de n’importe où à condition que sa valeur soit entre 5 et 10 
+    public int A2
+    {
+        get {return a2;}
+        set
+        {
+            if(value >= 5 && value <= 10)
+            {
+                a2 = value;
+            }
+        }
+        
     }
 }
 
