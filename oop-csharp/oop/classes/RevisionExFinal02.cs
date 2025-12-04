@@ -14,7 +14,7 @@ abstract class ClassA
     public abstract void Show();
     public int Modify(int x)
     {
-        x = a1;
+        x = a1 - x ;
         return x;
     }
 }
@@ -30,6 +30,7 @@ class ClassB : ClassA
 
     public override void Show()
     {
+        Console.WriteLine(a1 + "" + b1);
     }
 
     public virtual void Show(int x)
@@ -54,6 +55,7 @@ class ClassC : ClassA
 
     public override void Show()
     {
+        Console.WriteLine(a1 + "" + c1);
     }
 
     public int Modify(ClassB objB)

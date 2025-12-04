@@ -20,6 +20,7 @@ class Program
             Console.WriteLine("6. Démonstration Casting");
             Console.WriteLine("7. Démonstration de la classe Etudiant/Etudiant Etranger");
             Console.WriteLine("8. Démonstration de la classe Pour Révision 01 Examen Finale");
+            Console.WriteLine("9. Démonstration de la classe Pour Révision 02 Examen Finale");
             Console.WriteLine("0. Quitter");
             Console.Write("\nVotre choix : ");
 
@@ -51,6 +52,9 @@ class Program
                     break;
                 case "8":
                     RunRevision01Demo();
+                    break;
+                case "9":
+                    RunRevision02Demo();
                     break;
                 case "0":
                     exit = true;
@@ -328,6 +332,38 @@ class Program
             // Console.WriteLine(objC.Calcul(objC));  // must take and int as parameter
             objB.Affichage();   // vide
             objC.Affichage();  // 0
+        }
+         static void RunRevision02Demo()
+        {
+            Console.WriteLine("Révision 02 Examen finale");
+
+            // Parmi les instructions du Main suivantes, n'écrire que les instructions justes ou corrigées
+
+            // ClassA objA = new ClassA (1);  // INCORRECT : cancot create an instance of an abstract class
+            // ClassB objB = new ClassB(4, -5); // CORRECT
+            // ClassC objC = new ClassC(-6, -7);  // CORRECT 
+            // ClassD objD = new ClassD(-8, -9);  // INCORRECT :  need three arguments
+
+            int parametre = 10;                    // Line 3
+            ClassB objB = new ClassB(1, -2);      // Line 4
+            ClassC objC = new ClassC(3, 4);        // Line 5
+            ClassD objD = new ClassD(5, -6, 7);    // Line 6
+
+            objB.Show();                             // Line 7
+            objC.Show();                             // Line 8
+            objD.Show(objD.d1);                      // Line 9
+            Console.WriteLine(objC.Modify(parametre)); // Line 10
+            Console.WriteLine(parametre);            // Line 11
+            Console.WriteLine(objD.Modify(objB.b1)); // Line 12
+            objC.Show(parametre);                    // Line 13
+            Console.WriteLine(objC.Modify(objB));    // Line 14
+            Console.WriteLine(objC.Modify(objD.d1)); // Line 15
+            Console.WriteLine(objB.Modify(objD.d1)); // Line 16
+            Console.WriteLine(objC.Modify(objD));    // Line 17
+            Console.WriteLine(objB.Modify(objD));    // Line 18
+            objB.Show(objD.d1);                      // Line 19
+            objB.Show();                             // Line 20
+            objD.Show();                             // Line 21
         }
     }
 }
