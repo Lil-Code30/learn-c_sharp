@@ -33,5 +33,19 @@ namespace Mise_en_application_02.CLasses
 
             return moyenne;
         }
+
+        public void afficherNotes()
+        {
+            Console.WriteLine("=========== Vos Notes ==========");
+            foreach(float note in notes)
+            {
+                int i = 1;
+                Console.WriteLine("---------------------");
+                Console.WriteLine($"Note: {i} - {note}");
+                Console.WriteLine("---------------------");
+                i++;
+            }
+            Console.WriteLine("=================================");
+        }
     }
 }
