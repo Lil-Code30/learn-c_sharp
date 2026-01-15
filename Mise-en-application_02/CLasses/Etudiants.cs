@@ -16,7 +16,7 @@ namespace Mise_en_application_02.CLasses
 
         public static float calculMoyenne()
         {
-            int nombresDesEtudiant = etudiants.Count();
+            int nombresDesEtudiant = etudiants.Count;
 
             float total = 0;
 
