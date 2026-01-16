@@ -6,4 +6,10 @@ public class Bibliothecaire : Employe
     {
         
     }
+
+    public void Retour(Livre livre)
+    {
+        livre.locataire = null;
+        livre.disponible = true;
+    }
 }

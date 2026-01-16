@@ -17,12 +17,19 @@ public class Employe
 
     public void Afficher()
     {
-        
+        Console.WriteLine("================= Carte Employe ==========");
+        Console.WriteLine($"Nom : {this.nom}");
+        Console.WriteLine($"Fonction : {this.fonction}");
+        Console.WriteLine($"Bureau N0 : {this.bureau}");
+        Console.WriteLine($"Email : {this.email}");
+        Console.WriteLine("==========================================");
     }
 
     public void Louer(Livre livre)
     {
-        
+        livre.locataire = this;
+        livre.disponible = false;
+        Console.WriteLine("Livre");
     }    
     
 }
