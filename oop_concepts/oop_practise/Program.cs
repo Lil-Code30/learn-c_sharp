@@ -1,4 +1,4 @@
-﻿using oop.classes;
+﻿using oop_practise.classes;
 
 class Program
 {
@@ -25,7 +25,7 @@ class Program
             Console.Write("\nVotre choix : ");
 
             string choix = Console.ReadLine();
-            
+
             Console.WriteLine();
             switch (choix)
             {
@@ -71,7 +71,7 @@ class Program
         static void RunRectangleDemo()
         {
             Rectangle r1 = new Rectangle();
-            
+
             Console.Write("Veuillez entrer la longueur : ");
             int longeur = Int16.Parse(Console.ReadLine());
 
@@ -83,7 +83,7 @@ class Program
 
             Console.WriteLine($"La Surface (longueur {longeur} et largeur: {largeur}) est : {r1.Surface()}");
         }
-        
+
 
         static void RunLibraryDemo()
         {
@@ -154,7 +154,7 @@ class Program
             livres.ForEach(l => l.Afficher());
 
         }
-        
+
         static void RunMontreDemo()
         {
             Console.WriteLine("===== eMontre Shop =======");
@@ -235,7 +235,7 @@ class Program
             }
 
         }
-        
+
         static void RunPersonDemo()
         {
             // var person = new Person();
@@ -249,7 +249,7 @@ class Program
             person.Birthdate = new DateTime(2000, 1, 1);
 
             Console.WriteLine($"I am {person.Age} years old.");
-        } 
+        }
 
         static void RunPresentationDemo()
         {
@@ -305,7 +305,7 @@ class Program
                 string pays = e is EtudiantEtranger ee ? ee.PaysOrigine : "-";
                 Console.WriteLine($"║ {e.Nom,-15} ║ {e.Adresse,-20} ║ {pays,-12} ║ {e.PaiementSession(coursInscrits),14:N0} ║");
             }
-             Console.WriteLine("╚═════════════════╩══════════════════════╩══════════════╩════════════════╝");
+            Console.WriteLine("╚═════════════════╩══════════════════════╩══════════════╩════════════════╝");
             Console.WriteLine();
         }
 
@@ -314,8 +314,8 @@ class Program
             Console.WriteLine("Révision 01 Examen finale");
 
             // ClasseA objA = new ClasseA(0);  // Cannot create an instance of the abstract type or interface 'ClasseA'  
-            ClasseB objB = new ClasseB(2, 3);       
-            ClasseC objC = new ClasseC(4, 5, 6); 
+            ClasseB objB = new ClasseB(2, 3);
+            ClasseC objC = new ClasseC(4, 5, 6);
 
             // Barrer ou Donner l’affichage, après correction si nécessaire
 
@@ -333,7 +333,7 @@ class Program
             objB.Affichage();   // vide
             objC.Affichage();  // 0
         }
-         static void RunRevision02Demo()
+        static void RunRevision02Demo()
         {
             Console.WriteLine("Révision 02 Examen finale");
 
@@ -349,21 +349,21 @@ class Program
             ClassC objC = new ClassC(3, 4);        // Line 5
             ClassD objD = new ClassD(5, -6, 7);    // Line 6
 
-            objB.Show();                             // Line 7
-            objC.Show();                             // Line 8
-            objD.Show(objD.d1);                      // Line 9
-            Console.WriteLine(objC.Modify(parametre)); // Line 10
-            Console.WriteLine(parametre);            // Line 11
-            Console.WriteLine(objD.Modify(objB.b1)); // Line 12
-            objC.Show(parametre);                    // Line 13
-            Console.WriteLine(objC.Modify(objB));    // Line 14
-            Console.WriteLine(objC.Modify(objD.d1)); // Line 15
-            Console.WriteLine(objB.Modify(objD.d1)); // Line 16
-            Console.WriteLine(objC.Modify(objD));    // Line 17
-            Console.WriteLine(objB.Modify(objD));    // Line 18
-            objB.Show(objD.d1);                      // Line 19
-            objB.Show();                             // Line 20
-            objD.Show();                             // Line 21
+            //objB.Show();                             // Line 7
+            //objC.Show();                             // Line 8
+            //objD.Show(objD.d1);                      // Line 9
+            //Console.WriteLine(objC.Modify(parametre)); // Line 10
+            //Console.WriteLine(parametre);            // Line 11
+            //Console.WriteLine(objD.Modify(objB.b1)); // Line 12
+            //objC.Show(parametre);                    // Line 13
+            //Console.WriteLine(objC.Modify(objB));    // Line 14
+            //Console.WriteLine(objC.Modify(objD.d1)); // Line 15
+            //Console.WriteLine(objB.Modify(objD.d1)); // Line 16
+            //Console.WriteLine(objC.Modify(objD));    // Line 17
+            //Console.WriteLine(objB.Modify(objD));    // Line 18
+            //objB.Show(objD.d1);                      // Line 19
+            //objB.Show();                             // Line 20
+            //objD.Show();                             // Line 21
         }
     }
 }

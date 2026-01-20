@@ -1,17 +1,17 @@
-﻿namespace Inheritance;
+﻿namespace inheritance;
 
 // WorkItem implicitly inherits from the Object class
 public class WorkItem
 {
     // Static field currentID store the Job ID of the last WorkItem that has been created
     private static int currentID;
-    
+
     // Properties
     protected int ID { get; set; }
     protected string Title { get; set; }
     protected string Description { get; set; }
     protected TimeSpan jobLength { get; set; }
-    
+
     // Default constructor. If a derived class does not invoke a base-class constructor explicitly
     // the default constructor is called implicitly
     public WorkItem()
@@ -21,7 +21,7 @@ public class WorkItem
         Description = "Default description";
         jobLength = new TimeSpan();
     }
-    
+
     // Instance constructor that has three parameters.
     public WorkItem(string title, string desc, TimeSpan jobLen)
     {
@@ -30,25 +30,25 @@ public class WorkItem
         Description = desc;
         jobLength = jobLen;
     }
-    
+
     // Static constructor to initialize the static member, currentID. This
     // constructor is called one time, automatically, before any instance
     // of WorkItem or ChangeRequest is created, or currentID is referenced.
     static WorkItem() => currentID = 0;
-    
+
     // currentID is a static field. It is incremented each time a new
     // instance of WorkItem is created.
     protected int GetNextID() => ++currentID;
-    
-   // Method Update enables you to update the title and job Length of an existing WorkItem object
-   public void Update(string title, TimeSpan jobLen)
-   {
-       this.Title = title;
-       this.jobLength = jobLen;
-   }
-   
-   // Virtual method override of the ToString method that is inherited from System.Object
-   public override string ToString() => $"{this.ID} - {this.Title}";
+
+    // Method Update enables you to update the title and job Length of an existing WorkItem object
+    public void Update(string title, TimeSpan jobLen)
+    {
+        this.Title = title;
+        this.jobLength = jobLen;
+    }
+
+    // Virtual method override of the ToString method that is inherited from System.Object
+    public override string ToString() => $"{this.ID} - {this.Title}";
 }
 
 // ChangeRequest drives from WorkItem and adds a property (originalItemID) and two constructors
@@ -63,7 +63,7 @@ public class ChangeRequest : WorkItem
 
     // Default Contructor for the derived class
     public ChangeRequest() { }
-    
+
     // Instance constructor that has four parameters
     public ChangeRequest(string title, string desc, TimeSpan jobLen, int originalID)
     {
@@ -78,7 +78,7 @@ public class ChangeRequest : WorkItem
         // Property originalItemID is a member of ChangeRequest, but not
         // of WorkItem.
         this.originalItemID = originalID;
-    }  
+    }
 }
 class Programm
 {
@@ -102,4 +102,4 @@ class Programm
         // ChangeRequest inherits WorkItem's override of ToString.
         Console.WriteLine(change.ToString());
     }
-}   
+}
