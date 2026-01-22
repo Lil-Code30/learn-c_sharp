@@ -1,6 +1,6 @@
 namespace mise_en_application_02_02.classes;
 
-public class TransportAerienUrgent : Transport
+public class TransportAerienUrgent : TransportAerien
 {
     public override double Tarif(Marchandise marchandise)
     {
