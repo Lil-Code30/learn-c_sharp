@@ -1,5 +1,4 @@
-﻿using mise_en_application_02_02;
-using mise_en_application_02_02.classes;
+﻿using mise_en_application_02_02.classes;
 
 Marchandise m1 = new Marchandise(10.5f, 8.2f);
 
