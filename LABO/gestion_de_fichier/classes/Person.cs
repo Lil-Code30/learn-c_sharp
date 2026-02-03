@@ -14,4 +14,16 @@ class Person
         this.job = job;
         this.age = age;
     }
+    
+    public void Afficher()
+    {
+        Console.WriteLine("+----------------+----------------+");
+        Console.WriteLine("| Field          | Value          |");
+        Console.WriteLine("+----------------+----------------+");
+        Console.WriteLine($"| Last Name      | {lastname,-14} |");
+        Console.WriteLine($"| First Name     | {firstname,-14} |");
+        Console.WriteLine($"| Job            | {job,-14} |");
+        Console.WriteLine($"| Age            | {age,-14} |");
+        Console.WriteLine("+----------------+----------------+");
+    }
 }

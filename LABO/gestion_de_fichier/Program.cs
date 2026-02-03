@@ -42,7 +42,14 @@ File.WriteAllText(jsonFilePath, person_json);
 
 
 Console.WriteLine("====== JSON content =====");
-string json_contents = File.ReadAllText(filePath);
-Console.WriteLine(json_contents);
+string person_read = File.ReadAllText(jsonFilePath);
+
+Console.WriteLine(person_read);
+
+// deserialization 
+
+Person person_read_deserialized = JsonConvert.DeserializeObject<Person>(person_read);
+
+person_read_deserialized.Afficher();
 
 
