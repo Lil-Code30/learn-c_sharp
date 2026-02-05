@@ -11,6 +11,11 @@ namespace Mise_en_application_04_02
         // D’importer des données depuis un fichier CSV.
         public static void CsvReader(string pathFile)
         {
+            if (!File.Exists(pathFile))
+            {
+                Console.WriteLine($"File {pathFile} does not exist");
+                return;
+            }
             using (StreamReader reader = new StreamReader(pathFile))
             using (var csv = new CsvReader(reader, CultureInfo.InvariantCulture))
             {
@@ -32,6 +37,11 @@ namespace Mise_en_application_04_02
         // D’exporter une liste d’objets en fichier CSV.
         public static void CsvWriter(string filePath, List<Student> list)
         {
+            if (!File.Exists(filePath))
+            {
+                Console.WriteLine($"File {filePath} does not exist");
+                return;
+            }
             using (StreamWriter writer = new StreamWriter(filePath))
             using(var csv = new CsvWriter(writer, CultureInfo.InvariantCulture))
             {
@@ -43,6 +53,11 @@ namespace Mise_en_application_04_02
         // D’ajouter de nouvelles entrées et de mettre à jour un fichier CSV existant.
         public static void CsvAppend(string filePath, List<Student> list)
         {
+            if (!File.Exists(filePath))
+            {
+                Console.WriteLine($"File {filePath} does not exist");
+                return;
+            }
             var config = new CsvConfiguration(CultureInfo.InvariantCulture)
             {
                 // Don't write the header again
