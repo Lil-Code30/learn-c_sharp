@@ -6,7 +6,7 @@ namespace Mise_en_application_04_01
     public  class CsvUtils
     {
 
-       public static void CsvWriter(string filePath, string[][] data)
+       public static void CsvWriter(string filePath, string[][] data)  
         {
             using (StreamWriter writer = new StreamWriter(filePath))
             {
@@ -27,6 +27,11 @@ namespace Mise_en_application_04_01
 
             using ( StreamReader reader = new StreamReader(filePath))
             {
+                if (!File.Exists(filePath))
+                {
+                    Console.WriteLine($"File {filePath} does not exist");
+                    return;
+                }
                 var lines = File.ReadAllLines(filePath).ToList();
                 int fileContentLenght = lines.Count;
                 
