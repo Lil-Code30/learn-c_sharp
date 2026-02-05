@@ -1,14 +1,14 @@
-# Exercice 02 : Gestion des fichiers CSV (en utilisant une bibliothèque)
+# Exercice 02 : Gestion des fichiers CSV (en utilisant une bibliothÃ¨que)
 
-En mettant en pratique les concepts du cours et en utilisant la bibliothèque [CsvHelper](https://joshclose.github.io/CsvHelper/), il est
-demandé de :
+En mettant en pratique les concepts du cours et en utilisant la bibliothÃ¨que [CsvHelper](https://joshclose.github.io/CsvHelper/), il est
+demandÃ© de :
 
-- Installer la bibliothèque CsvHelper via le gestionnaire de paquets NuGet dans MS Visual Studio.
-- Définir les entités avec les bonnes propriétés et permissions d’accès.
-- Se référer à la documentation officielle de CsvHelper pour respecter les bonnes pratiques.
-- Implémenter un petit menu permettant :
-	- D’importer des données depuis un fichier CSV.
-	- D’exporter une liste d’objets en fichier CSV.
-	- D’ajouter de nouvelles entrées et de mettre à jour un fichier CSV existant.
+- Installer la bibliothÃ¨que CsvHelper via le gestionnaire de paquets NuGet dans MS Visual Studio.
+- DÃ©finir les entitÃ©s avec les bonnes propriÃ©tÃ©s et permissions dâ€™accÃ¨s.
+- Se rÃ©fÃ©rer Ã  la documentation officielle de CsvHelper pour respecter les bonnes pratiques.
+- ImplÃ©menter un petit menu permettant :
+    - Dâ€™importer des donnÃ©es depuis un fichier CSV.
+    - Dâ€™exporter une liste dâ€™objets en fichier CSV.
+    - Dâ€™ajouter de nouvelles entrÃ©es et de mettre Ã  jour un fichier CSV existant.
 - Comparer le traitement manuel [Exercice 01](https://github.com/Lil-Code30/learn-c_sharp/tree/main/LABO/Mise_en_application_04-01) avec l'approche utilisant CsvHelper :
-- Quelles sont les différences en termes de simplicité et de performances ?
+- Quelles sont les diffÃ©rences en termes de simplicitÃ© et de performances ?
