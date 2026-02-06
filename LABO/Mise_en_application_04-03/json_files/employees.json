@@ -1,0 +1,32 @@
+[
+  {
+    "nom": "Deschênes",
+    "prenom": "Philippe",
+    "fonction": "Ingénieur IT",
+    "entreprise": "CGI"
+  },
+  {
+    "nom": "Desjardins",
+    "prenom": "Catherine",
+    "fonction": "Responsable RH",
+    "entreprise": "Desjardins"
+  },
+  {
+    "nom": "Leduc",
+    "prenom": "Vincent",
+    "fonction": "Analyste Data",
+    "entreprise": "CGI"
+  },
+  {
+    "nom": "Tremblay",
+    "prenom": "Julie",
+    "fonction": "Chef de projet",
+    "entreprise": "Desjardins"
+  },
+  {
+    "nom": "Fortin",
+    "prenom": "Hugo",
+    "fonction": "Développeur Web",
+    "entreprise": "Desjardins"
+  }
+]

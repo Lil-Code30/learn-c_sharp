@@ -1,0 +1,42 @@
+[
+  {
+    "nom": "Bouchard",
+    "prenom": "Annette",
+    "age": 30,
+    "cycle": "3ème",
+    "specialite": "Administration",
+    "universite": "UQAR"
+  },
+  {
+    "nom": "Tremblay",
+    "prenom": "Antoine",
+    "age": 20,
+    "cycle": "1er",
+    "specialite": "Informatique",
+    "universite": "UQAC"
+  },
+  {
+    "nom": "Lavoie",
+    "prenom": "Julien",
+    "age": 25,
+    "cycle": "2ème",
+    "specialite": "Ingénierie",
+    "universite": "Polytechnique Montréal"
+  },
+  {
+    "nom": "Gagnon",
+    "prenom": "Sophie",
+    "age": 22,
+    "cycle": "1er",
+    "specialite": "Médecine",
+    "universite": "Université de Montréal"
+  },
+  {
+    "nom": "Mercier",
+    "prenom": "David",
+    "age": 28,
+    "cycle": "3ème",
+    "specialite": "Biologie",
+    "universite": "Université Laval"
+  }
+]
