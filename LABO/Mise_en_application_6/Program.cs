@@ -18,19 +18,21 @@ namespace Mise_en_application_6
                     case "1":
                         Exercice01_GestionPile.Executer();
                         break;
+
                     case "2":
-                        // Exercice02_XXXX.Executer();
-                        Console.WriteLine("⚠️ Exercice 2 non encore implémenté");
+                        Exercice02_GestionFile.Executer();
                         break;
+
                     case "3":
                         // Exercice03_XXXX.Executer();
                         Console.WriteLine("⚠️ Exercice 3 non encore implémenté");
                         break;
-                    // ... Ajouter les cas pour les exercices 4 à 10
+          
                     case "0":
                         Console.WriteLine("\n👋 Merci d'avoir utilisé le programme. Au revoir !");
                         continuer = false;
                         break;
+
                     default:
                         Console.WriteLine("\n❌ Choix invalide. Veuillez sélectionner une option entre 0 et 10.\n");
                         break;
