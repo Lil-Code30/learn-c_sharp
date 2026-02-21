@@ -57,16 +57,16 @@ namespace Mise_en_application_6
 
             Console.WriteLine("📚 LISTE DES EXERCICES :");
             Console.WriteLine("─".PadRight(50, '─'));
-            Console.WriteLine("  1️  Gestion d'une pile de dossiers d'assurance");
-            Console.WriteLine("  2️  [Nom de l'exercice 2]");
-            Console.WriteLine("  3️  [Nom de l'exercice 3]");
-            Console.WriteLine("  4️  [Nom de l'exercice 4]");
-            Console.WriteLine("  5️  [Nom de l'exercice 5]");
-            Console.WriteLine("  6️  [Nom de l'exercice 6]");
-            Console.WriteLine("  7️  [Nom de l'exercice 7]");
-            Console.WriteLine("  8️  [Nom de l'exercice 8]");
-            Console.WriteLine("  9️  [Nom de l'exercice 9]");
-            Console.WriteLine("  10 [Nom de l'exercice 10]");
+            Console.WriteLine("  1️  Gestion d’une pile de dossiers d’assurance");
+            Console.WriteLine("  2️  Gestion des commandes d’une pizzeria (file d’attente)");
+            Console.WriteLine("  3️  Construction et parcours d’un arbre binaire ");
+            Console.WriteLine("  4️  Inversion d’une chaîne avec une pile ");
+            Console.WriteLine("  5️  Vérification de parenthèses équilibrées (pile)");
+            Console.WriteLine("  6️  Gestion de l'historique des actions (Undo/Redo) avec une pile");
+            Console.WriteLine("  7️  Simulation d’une file d’attente dans une banque (file) ");
+            Console.WriteLine("  8️  Calcul de la profondeur d’un arbre binaire ");
+            Console.WriteLine("  9️  Fusion de deux listes triées (listes chaînées)");
+            Console.WriteLine("  10 Recherche d’un élément dans un arbre binaire ");
             Console.WriteLine("─".PadRight(50, '─'));
             Console.WriteLine("  0️  Quitter le programme\n");
 
