@@ -35,6 +35,13 @@ namespace Mise_en_application_6
                         Console.WriteLine(reversString);
                         break;
 
+                    case "5":
+                        Console.WriteLine("Enter the Phrase to verify: ");
+                        string phrase = Console.ReadLine();
+                        bool result = VerificationParentheses.VerifParentheses(phrase);
+                        Console.WriteLine(result);
+                        break;
+
                     case "0":
                         Console.WriteLine("\n👋 Merci d'avoir utilisé le programme. Au revoir !");
                         continuer = false;
