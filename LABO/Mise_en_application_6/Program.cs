@@ -42,6 +42,31 @@ namespace Mise_en_application_6
                         Console.WriteLine(result);
                         break;
 
+                    case "6":
+                        // Exercice06_XXXX.Executer();
+                        Console.WriteLine("⚠️ Exercice 6 non encore implémenté");
+                        break;
+
+                    case "7":
+                        // Exercice06_XXXX.Executer();
+                        Console.WriteLine("⚠️ Exercice 7 non encore implémenté");
+                        break;
+
+                    case "8":
+                        // Exercice06_XXXX.Executer()
+                        Console.WriteLine("⚠️ Exercice 8 non encore implémenté");
+                        break;
+
+                    case "9":
+                        // Exercice06_XXXX.Executer();
+                        Console.WriteLine("⚠️ Exercice 9 non encore implémenté");
+                        break;
+
+                    case "10":
+                        // Exercice06_XXXX.Executer();
+                        Console.WriteLine("⚠️ Exercice 10 non encore implémenté");
+                        break;
+
                     case "0":
                         Console.WriteLine("\n👋 Merci d'avoir utilisé le programme. Au revoir !");
                         continuer = false;
