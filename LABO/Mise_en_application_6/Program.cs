@@ -1,4 +1,5 @@
-﻿using Mise_en_application_6.Exercices;
+﻿using Mise_en_application_6.Classes;
+using Mise_en_application_6.Exercices;
 
 namespace Mise_en_application_6
 {
@@ -27,7 +28,13 @@ namespace Mise_en_application_6
                         // Exercice03_XXXX.Executer();
                         Console.WriteLine("⚠️ Exercice 3 non encore implémenté");
                         break;
-          
+                    case "4":
+                        Console.WriteLine("Enter the string to reverse: ");
+                        string str = Console.ReadLine();
+                        string reversString = InverserChaine.Inverser_Chaine(str);
+                        Console.WriteLine(reversString);
+                        break;
+
                     case "0":
                         Console.WriteLine("\n👋 Merci d'avoir utilisé le programme. Au revoir !");
                         continuer = false;
