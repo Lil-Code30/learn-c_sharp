@@ -25,8 +25,8 @@ namespace Mise_en_application_6
                         break;
 
                     case "3":
-                        // Exercice03_XXXX.Executer();
-                        Console.WriteLine("⚠️ Exercice 3 non encore implémenté");
+                        ArbreBinaire arbre = new ArbreBinaire();
+                        arbre.ConstruireArbre();
                         break;
                     case "4":
                         Console.WriteLine("Enter the string to reverse: ");
