@@ -43,8 +43,7 @@ namespace Mise_en_application_6
                         break;
 
                     case "6":
-                        // Exercice06_XXXX.Executer();
-                        Console.WriteLine("⚠️ Exercice 6 non encore implémenté");
+                        Exercice06_GestionPileActions.Executer();
                         break;
 
                     case "7":
