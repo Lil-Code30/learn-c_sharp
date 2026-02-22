@@ -68,8 +68,18 @@ namespace Mise_en_application_6
                         break;
 
                     case "10":
-                        // Exercice06_XXXX.Executer();
-                        Console.WriteLine("⚠️ Exercice 10 non encore implémenté");
+                        ArbreBinaire arbreTest2 = new ArbreBinaire();
+                        Noeud racine2 = arbreTest2.ConstruireArbreTest();
+
+                        // Test 1 : Recherche d'un élément existant (7)
+                        int valeurCherchee1 = 7;
+                        bool resultat1 = arbreTest2.RechercherElement(racine2, valeurCherchee1);
+                        Console.WriteLine($"Recherche de {valeurCherchee1} : {(resultat1 ? "Trouvé (True)" : "Non trouvé (False)")}");
+
+                        // Test 2 : Recherche d'un élément inexistant (10)
+                        int valeurCherchee2 = 10;
+                        bool resultat2 = arbreTest2.RechercherElement(racine2, valeurCherchee2);
+                        Console.WriteLine($"Recherche de {valeurCherchee2} : {(resultat2 ? "Trouvé (True)" : "Non trouvé (False)")}");
                         break;
 
                     case "0":

@@ -126,5 +126,26 @@ namespace Mise_en_application_6.Classes
                 return 1 + profondeurDroite;
             }
         }
+
+        public bool RechercherElement(Noeud racine, int valeur)
+        {
+            // 1. Cas de base : Si le nœud est vide, la valeur n'est pas ici.
+            if (racine == null)
+            {
+                return false;
+            }
+
+            // 2. Cas de succès : Si la valeur du nœud actuel correspond à la valeur cherchée.
+            if(racine.Valeur == valeur)
+            {
+                return true;
+            }
+
+            // 3. Récursion : On cherche dans le sous-arbre GAUCHE 
+            //    OU (||) dans le sous-arbre DROIT.
+            // Si l'un des deux retourne vrai, alors la fonction retourne vrai.
+            return RechercherElement(racine.Gauche, valeur) || RechercherElement(racine.Droit, valeur);
+
+        }
     }
 }
