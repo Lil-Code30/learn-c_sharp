@@ -87,5 +87,44 @@ namespace Mise_en_application_6.Classes
             }
         }
 
+        public Noeud ConstruireArbreTest()
+        {
+            Noeud racine = new Noeud(1);
+            racine.Gauche = new Noeud(2);
+            racine.Droit = new Noeud(3);
+            racine.Gauche.Gauche = new Noeud(4);
+            racine.Gauche.Droit = new Noeud(5);
+            racine.Droit.Droit = new Noeud(6);
+            racine.Gauche.Droit.Gauche = new Noeud(7);
+            racine.Gauche.Droit.Droit = new Noeud(8);
+            racine.Droit.Droit.Gauche = new Noeud(9);
+            return racine;
+        }
+
+        //  calcule la profondeur d’un arbre binaire
+        public int CalculerProfondeur(Noeud racine)
+        {
+            // Cas de base : Si l'arbre est vide (ou si on atteint une feuille vide) 
+            if (racine == null)
+            {
+                return 0;
+            }
+
+            // Appel récursif pour calculer la profondeur du sous-arbre gauche
+            int profondeurGauche = CalculerProfondeur(racine.Gauche);
+
+            // Appel récursif pour calculer la profondeur du sous-arbre droit
+            int profondeurDroite = CalculerProfondeur(racine.Droit);
+
+            // La profondeur totale est 1 (le nœud actuel) + le maximum des deux sous-arbres
+            if (profondeurGauche > profondeurDroite)
+            {
+                return 1 + profondeurGauche;
+            }
+            else
+            {
+                return 1 + profondeurDroite;
+            }
+        }
     }
 }

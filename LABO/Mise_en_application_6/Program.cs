@@ -53,8 +53,13 @@ namespace Mise_en_application_6
                         break;
 
                     case "8":
-                        // Exercice06_XXXX.Executer()
-                        Console.WriteLine("⚠️ Exercice 8 non encore implémenté");
+                        ArbreBinaire arbreTest = new ArbreBinaire();
+                     
+                        Noeud racine = arbreTest.ConstruireArbreTest();
+
+                        int profondeur = arbreTest.CalculerProfondeur(racine);
+
+                        Console.WriteLine($"La profondeur de l'arbre est : {profondeur}");
                         break;
 
                     case "9":
